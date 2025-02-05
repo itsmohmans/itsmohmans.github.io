@@ -1,0 +1,25 @@
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.social-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s linear;
+}
+.social-links img.social-icon {
+  width: 32px;
+  height: 32px;
+  /* filter for the color: var(--primary-color) */
+  filter: brightness(0) saturate(100%) invert(56%) sepia(99%) saturate(256%)
+    hue-rotate(163deg) brightness(103%) contrast(104%);
+}
+.social-links a:hover {
+  background-color: transparent;
+  scale: 1.2;
+}

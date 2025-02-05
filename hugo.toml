@@ -11,10 +11,19 @@ theme = 'hugo-theme-console'
   # remove or comment this parameter to disable animation
   animateStyle = "animated zoomIn fast" 
   [params.author]
-    email = 'hi@momansour.me'
     name = 'Mo Mansour'
-    github = 'itsmohmans'
-    linkedin = 'mansourmoh'
+  [[params.author.social.links]]
+    name = 'GitHub'
+    url = 'https://github.com/itsmohmans/'
+    icon = 'mdi_github.svg'
+  [[params.author.social.links]]
+    name = 'LinkedIn'
+    url = 'https://www.linkedin.com/in/mansourmoh/'
+    icon = 'mdi_linkedin.svg'
+  [[params.author.social.links]]
+    name = 'Email'
+    url = 'mailto:hi@momansour.me'
+    icon = 'mdi_email_outline.svg'
 
   [[params.navlinks]]
   name = "about/"

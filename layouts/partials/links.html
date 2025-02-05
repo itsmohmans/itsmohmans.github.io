@@ -1,12 +1,12 @@
 <div class="social-links">
+  {{range .Site.Params.author.social.links}}
   <a
-    class="github-link"
-    href="https://github.com/{{.Site.Params.author.github}}/"
-    >GitHub</a
+    class="{{ .name | lower }}-link"
+    href="{{ .url }}"
+    target="_blank"
+    title="{{ .name }}"
   >
-  <a
-    class="linkedin-link"
-    href="https://linkedin.com/in/{{.Site.Params.author.linkedin}}/"
-    >LinkedIn</a
-  >
+    <img src="/icons/{{ .icon }}" alt="{{ .name }}" class="social-icon" />
+  </a>
+  {{ end }}
 </div>
