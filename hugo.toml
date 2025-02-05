@@ -1,15 +1,20 @@
 baseURL = 'https://momansour.me'
 languageCode = 'en-us'
-title = 'This is Mo Mansour'
+title = 'mo@mansour'
 theme = 'hugo-theme-console'
 
 [params]
   # Cutting off the page title to two chars for mobile (console-demo -> co)
   titleCutting = true
 
-  # Set the animation style -- https://anima  te.style/
-  # To disable animations, please remove or comment animationStyle parameter
+  # Set the animation style -- https://animate.style/
+  # remove or comment this parameter to disable animation
   animateStyle = "animated zoomIn fast" 
+  [params.author]
+    email = 'hi@momansour.me'
+    name = 'Mo Mansour'
+    github = 'itsmohmans'
+    linkedin = 'mansourmoh'
 
   [[params.navlinks]]
   name = "about/"
