@@ -23,3 +23,25 @@
   background-color: transparent;
   scale: 1.2;
 }
+
+/* Projects */
+.project-tags {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  gap: 10px;
+  align-items: center;
+}
+.project-tags .project-tech,
+.project-tags .project-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: end;
+}
+.project-tech span {
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  padding: 0.5px 4px;
+  font-size: calc(var(--global-font-size) - 4px);
+}

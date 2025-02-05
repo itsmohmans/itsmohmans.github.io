@@ -1,0 +1,38 @@
+{{ define "main" }}
+<h1>{{ .Page.Title }}</h1>
+<br/>
+{{ .Content }}
+
+<div class="posts-list">
+{{ range sort .Data.Pages "Date" "desc" }}
+    {{ if not .Params.private }}
+        <div class="post">
+            <p>
+                <div class="date">{{ .PublishDate.Format "Jan, 2006" }}</div>    
+                <div class="post-header">
+                  <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
+                  {{ if .Params.links }}
+                  <div class="project-tags">
+                    <div class="project-links">
+                      {{ range .Params.links }}
+                      <a href="{{ .url }}" target="_blank">[{{ .name }}]</a>
+                      {{ end }}
+                    </div>
+                    {{ if .Params.tags }}
+                    <div class="project-tech">
+                      {{ range .Params.tags }}
+                      <span>{{ . }}</span>
+                      {{ end }}
+                    </div>
+                    {{ end }}
+                  </div>
+                  {{ end }}
+                </div>
+                {{ .Summary }}
+            </p>
+        </div>
+    {{ end }}
+{{ end }}
+</div>
+
+{{ end }}
