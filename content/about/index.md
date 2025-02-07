@@ -4,5 +4,4 @@ draft = false
 title = 'About'
 +++
 
-Hiiiii!
-test lol
+**_CONTENT IS IN PROGRESS_**

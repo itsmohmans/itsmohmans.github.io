@@ -3,46 +3,28 @@
 <h1>{{.Site.Params.author.name}}</h1>
 
 <p>
-  <i><b>CONTENT IS IN PROGRESS</b></i
-  ><br />
-  Hi! I'm {{.Site.Params.author.name}}. I love building cool web apps that
-  actually helps people, and I love everything open source.
-  <a href="/about">Check out my work</a> and
+  Hi! I'm {{.Site.Params.author.name}}. I build web apps, tinker with
+  open-source, and love creating things that make a difference. Check out my
+  work below and
   <a href="mailto:hi@momansour.me">let's build something awesome!</a>
 </p>
 {{ partial "links.html" . }}
-<br />
+<hr />
 
-<!-- <h1>Latest posts</h1>
-
+<div class="homepage-projects-heading">
+  <h1>Latest projects</h1>
+  <span>[<a href="/projects">View all projects</a>]</span>
+</div>
 <div class="posts-list">
-{{ with .Site.GetPage "/posts" }}
-    {{ range first 3 (sort .Data.Pages "Date" "desc" (where .Pages ".Params.private" "!=" true))}}
-        <div class="post">
-            <p>
-                <div class="date">{{ .PublishDate.Format "Jan. 2, 2006" }}</div>
-                <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
-                {{ .Summary }}
-            </p>
-        </div>    
-    {{ end }}
-{{ end }}
-</div> -->
-
-<!-- <h1>Latest photos</h1>
-
-<div class="image-grid">
-{{ with .Site.GetPage "/photos" }}
-    {{ range first 3 (sort .Data.Pages "Date" "desc")}}
-        <a href="{{ .Permalink }}" title="{{ .Title }}">
-        {{ $image := .Page.Resources.GetMatch .Params.image }}
-        {{ with $image }}
-            {{ $thumb := .Resize "400x" }}
-            <img src="{{ $thumb.RelPermalink }}" alt="{{ .Title }}" class="img-responsive">
-        {{end}}
-        </a>
-    {{ end }}
-{{ end }}
-</div> -->
+  {{ with .Site.GetPage "/projects" }} {{ range first 3 (sort .Data.Pages "Date"
+  "desc" (where .Pages ".Params.private" "!=" true))}}
+  <div class="post">
+    <div>
+      <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
+      {{ .Summary }}
+    </div>
+  </div>
+  {{ end }} {{ end }}
+</div>
 
 {{ end }}
