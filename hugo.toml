@@ -1,11 +1,11 @@
 baseURL = 'https://momansour.me'
 languageCode = 'en-us'
-title = 'mo@mansour'
+title = 'mo'
 theme = 'hugo-theme-console'
 
 [params]
   # Cutting off the page title to two chars for mobile (console-demo -> co)
-  titleCutting = true
+  titleCutting = false
 
   # Set the animation style -- https://animate.style/
   # remove or comment this parameter to disable animation
