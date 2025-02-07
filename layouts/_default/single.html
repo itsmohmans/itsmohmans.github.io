@@ -1,0 +1,22 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ if .Params.links }}
+<div class="project-tags">
+  <div class="project-links">
+    {{ range .Params.links }}
+    <a href="{{ .url }}" target="_blank">[{{ .name }}]</a>
+    {{ end }}
+  </div>
+  {{ if .Params.tags }}
+  <div class="project-tech">
+    {{ range .Params.tags }}
+    <span>{{ . }}</span>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
+{{ end }}
+
+<div class="project-content">{{ .Content }}</div>
+
+{{ end }}

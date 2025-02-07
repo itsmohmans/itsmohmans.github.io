@@ -45,3 +45,10 @@
   padding: 0.5px 4px;
   font-size: calc(var(--global-font-size) - 4px);
 }
+.posts-list .post-header ~ p {
+  display: inline;
+}
+.project-content {
+  margin-top: 32px;
+  text-align: justify;
+}
