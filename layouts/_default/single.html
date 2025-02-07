@@ -1,12 +1,13 @@
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
-{{ if .Params.links }}
 <div class="project-tags">
+  {{ if .Params.links }}
   <div class="project-links">
     {{ range .Params.links }}
     <a href="{{ .url }}" target="_blank">[{{ .name }}]</a>
     {{ end }}
   </div>
+  {{ end }}
   {{ if .Params.tags }}
   <div class="project-tech">
     {{ range .Params.tags }}
@@ -15,7 +16,6 @@
   </div>
   {{ end }}
 </div>
-{{ end }}
 
 <div class="project-content">{{ .Content }}</div>
 
