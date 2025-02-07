@@ -16,15 +16,33 @@
   <span>[<a href="/projects">View all projects</a>]</span>
 </div>
 <div class="posts-list">
-  {{ with .Site.GetPage "/projects" }} {{ range first 3 (sort .Data.Pages "Date"
+  {{ with .Site.GetPage "/projects" }}
+  {{ range first 3 (sort .Data.Pages "Date"
   "desc" (where .Pages ".Params.private" "!=" true))}}
   <div class="post">
     <div>
       <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
-      {{ .Summary }}
+      <div class="project-tags">
+        {{ if .Params.links }}
+        <div class="project-links">
+          {{ range .Params.links }}
+          <a href="{{ .url }}" target="_blank">[{{ .name }}]</a>
+          {{ end }}
+        </div>
+        {{ end }}
+        {{ if .Params.tags }}
+        <div class="project-tech">
+          {{ range .Params.tags }}
+          <span>{{ . }}</span>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+      {{ .Summary }} [<a href="{{ .Permalink }}">read more...</a>]
     </div>
   </div>
-  {{ end }} {{ end }}
+  {{ end }}
+  {{ end }}
 </div>
 
 {{ end }}
