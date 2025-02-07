@@ -17,7 +17,7 @@
 </div>
 <div class="posts-list">
   {{ with .Site.GetPage "/projects" }}
-  {{ range first 3 (sort .Data.Pages "Date"
+  {{ range first 4 (sort .Data.Pages "Date"
   "desc" (where .Pages ".Params.private" "!=" true))}}
   <div class="post">
     <div>
