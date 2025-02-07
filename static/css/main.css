@@ -39,6 +39,12 @@
   flex-wrap: wrap;
   justify-content: end;
 }
+.project-tags .project-links {
+  justify-content: start;
+}
+.project-tags .project-tech {
+  margin-left: auto;
+}
 .project-tech span {
   border: 1px solid var(--secondary-color);
   border-radius: 5px;
@@ -48,6 +54,14 @@
 .posts-list .post-header ~ p {
   display: inline;
 }
+.posts-list {
+  padding-left: 0;
+}
+.posts-list .post:not(:last-child) {
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--global-font-color);
+}
+
 .project-content {
   margin-top: 32px;
   text-align: justify;
