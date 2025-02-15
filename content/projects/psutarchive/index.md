@@ -9,8 +9,8 @@ links =[
 ]
 +++
 
-[PSUT Archive](https://psutarchive.com?ref=momansour.me) is a free and open academic resource platform designed to help students access past exams, notes, and study materials. Built with usability, performance, and security in mind, the platform has become the go-to academic platform at my university, Princess Sumaya University for Technology (PSUT) with over 8,000 monthly users relying on it for exam preparation and studying. It's built with usability, performance, and security in mind, it offers an intuitive interface with powerful search options.  
-PSUT Archive is also backed by a content management system (Directus CMS) that allows students and professors to upload their own academic documents while ensuring security, reliability, and scalability.
+[PSUT Archive](https://psutarchive.com?ref=momansour.me) is a free and open academic resources platform designed to help students access past exams, notes, and study materials. Built with usability, performance, and security in mind, the platform has become the go-to academic platform at my university, Princess Sumaya University for Technology (PSUT) with over 8,000 monthly users relying on it for exam preparation and studying.  
+PSUT Archive is also backed by Directus CMS that allows students and professors to upload their own academic documents using their university email while ensuring security, reliability, and scalability.
 
 ## Key Features
 
